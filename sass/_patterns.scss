@@ -1,0 +1,44 @@
+// ———————————————————————————————
+// PATTERNS
+// ————————————————————————————–——
+.pattern{
+	z-index:50;
+	position:absolute;
+	@include transform(skew(-34deg));
+	span{
+		display:block;
+		height:14vw;
+		width:4.6vw;
+		background:$orange;
+		margin:0 2.3vw;
+	}
+	.row{
+		overflow:hidden;
+  	@include opacity(0);
+  	@include transform(scaleY(0));
+	  &:nth-child(1){
+	  	transform-origin: bottom;
+	  	@include transition(all 1.2s (0.6s) $easeOutExpo);
+	  }
+	  &:nth-child(2){
+	  	transform-origin: bottom;
+	  	@include transition(all 1.2s (0.4s) $easeOutExpo);
+	  }
+	  &:last-child{
+	  	transform-origin: top;
+	  	@include transition(all 1.2s (0.6s) $easeOutExpo);
+	  }
+	}
+}
+.pattern-med{
+	right:-2vw;
+	bottom:-14vw;
+}
+.pattern-in{
+	&.show{
+		.row{
+			@include opacity(1);
+			@include transform(scaleY(1));
+		}
+	}
+}
