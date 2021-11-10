@@ -2,7 +2,12 @@ $(function(){
 
   const scroller = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
-    smooth: true
+    smooth: true,
+    getDirection: true
+  });
+
+  scroller.on('scroll', (instance) => {
+      document.documentElement.setAttribute('data-direction', instance.direction)
   });
 
 	var $window       = $(window);
@@ -44,10 +49,10 @@ $(function(){
     }
 
     if( y == 'up' ){
-      $('header').addClass('hide');
+      //$('header').addClass('hide');
 
     } else{
-      $('header').removeClass('hide');
+      //$('header').removeClass('hide');
 
     }
 

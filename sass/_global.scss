@@ -4,7 +4,7 @@ body{
 	color:$primary;
 }
 main{
-	min-width:1440px;
+	min-width:1100px;
 }
 // ———————————————————————————————
 // BUTTONS
@@ -69,16 +69,18 @@ main{
 // ———————————————————————————————
 // HEADER
 // ————————————————————————————–——
+
+html[data-direction="down"] header {
+  transform: translate3d(0,-90px,0);
+}
 header{
 	position:fixed;
 	z-index:999;
 	top:0;
 	width:100%;
-	height:80px;
+	min-width:1100px;
+	height:90px;
 	@include transition(all 1s $easeOutExpo);
-	&.hide{
-		@include transform(translateY(-80px));
-	}
 	&.active{
 		background:white;
 		box-shadow:0 0 6px 0 rgba(0,0,0,0.3);
@@ -99,7 +101,7 @@ header{
 		position:absolute;
 		top:0;
 		left:0;
-		height:80px;
+		height:90px;
 		padding:20px 40px;
 		svg{
 			width:120px;
@@ -110,7 +112,7 @@ header{
 	}
 	.apply-header{
 		position:absolute;
-		height:80px;
+		height:90px;
 		right:114px;
 		top:0;
 		.apply-header_col{
@@ -135,7 +137,7 @@ header{
 .nav-btn {
   position: absolute;
   z-index: 1020;
-  top: 32px;
+  top: 37px;
   right:40px;
   height: 19px;
   cursor: pointer;
@@ -188,83 +190,6 @@ header{
 			&:nth-child(3) {
 			  bottom: 8px;
 			  @include transform(rotate(45deg));
-			}
-		}
-	}
-}
-// ———————————————————————————————
-// SITE MENU
-// ————————————————————————————–——
-nav#site-nav{
-	display:none;
-	z-index:1000;
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background:$primary;
-}
-.site-nav_inner{
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	padding-top:12vh;
-	color:white;
-	h4{
-		margin-bottom:15px;
-		margin-top:40px;
-		&:first-of-type{
-			margin-top:0;
-		}
-	}
-	li{
-		display:block;
-		color:rgba(255,255,255,0.8);
-		font-size:18px;
-		line-height:1;
-		margin-top:10px;
-	}
-}
-.site-nav_inner-wrap{
-	max-width:600px;
-}
-.site-nav_column{
-	padding:20px 0;
-	border-right:1px solid rgba(255,255,255,0.3);
-	&:last-child{
-		border-right:none;
-	}
-}
-.nav-footer{
-	font-size:18px;
-	margin-top:40px;
-	max-width:500px;
-	span{
-		text-align:center;
-		padding:10px 15px;
-		border-right:1px solid rgba(255,255,255,0.3);
-		color:rgba(255,255,255,0.8);
-		&:last-child{
-			border-right:none;
-		}
-		i{
-			font-size:22px;
-			&:first-child{
-        padding-bottom:10px;
-			}
-			color:rgba(255,255,255,1);
-		}
-	}
-	.nav-footer_social{
-		i{
-			font-size:22px;
-			margin:0 5px;
-			&.fa-instagram{
-				font-size:27px;
-				vertical-align:-2px;
 			}
 		}
 	}
@@ -330,7 +255,7 @@ nav#site-nav{
 		position:relative;
 		width:100%;
 		height:calc(100vh - 60px);
-		background:$primary;
+		background:#000;
 		overflow:hidden;
 		will-change: transform;
 		@include transition(transform 1.2s $easeOutExpo);
@@ -465,6 +390,7 @@ nav#site-nav{
 				width:100%;
 				height:100%;
 				background:white;
+				clip-path: polygon(0 0, 100% 0, 64.2% 100%, 0 100%);
 			}
       img{
       	position:relative;
@@ -515,7 +441,7 @@ nav#site-nav{
 		text-align:center;
 		p{
 			color:white;
-			font-size:23px;
+			font-size:24px;
 		}
 		.primary-btn{
 			margin-top:30px;
@@ -573,9 +499,9 @@ nav#site-nav{
 			position:relative;
 		}
 		p{
-			font-size:23px;
+			font-size:24px;
 			color:$primary;
-			margin-top:30px;
+			margin-top:60px;
 		}
 		.primary-btn{
 			margin-top:30px;
@@ -607,50 +533,131 @@ nav#site-nav{
 // NOVA BLOG
 // ————————————————————————————–——
 .nova-blog{
+	z-index:2;
 	position:relative;
-	padding:120px 0;
-	border-top:1px solid #ccc;
-	overflow:hidden;
-	h3{
-     &:after{
-			content:"";
-			display:block;
-			width:50px;
-			height:6px;
-			margin:15px auto 0 auto;
-			background:$orange;
-	  }
+	padding:150px 0 160px 0;
+	background:$secondary;
+	.nova-blog_wrap{
+		position:relative;
+		width:1800px;
+		left:50%;
+		margin-left:-450px;
+	}
+	.nova-blog_text{
+		margin-bottom:60px;
+		color:white;
 	}
 	.row{
-		display: table;
-		margin-top:60px;
+		display:flex;
 	}
 	.col-1-3{
+		position:relative;
+		width:900px;
 		float:none;
-		display: table-cell;
-		background:white;
-		border-radius:10px;
-		padding:50px;
-		box-shadow:0 5px 20px 0 rgba(0,0,0,0.2);
+		margin-right:30px;
 		&:last-child{
-		  margin-right:0;
-		  border-right:none;
+			@include opacity(0.3);
+			margin-right:0;
 		}
-		a{
-			font-size:14px;
-			text-transform:uppercase;
-			font-weight: 600;
-			color:$orange;
+		.col-1-3_inner{
+			position:relative;
+			height:100%;
+			width:100%;
+			background:white;
+			border-radius:10px;
+			padding:50px 0;
+			box-shadow:0 5px 15px 0 rgba(0,0,0,0.2);
+			object-fit: cover;
 		}
+	}
+	.nova-blog_date{
+		display:block;
+		font-size:12px;
+		font-weight:700;
+		letter-spacing:2px;
+		text-transform: uppercase;
+		font-style:italic;
+		color:$green;
+		margin-bottom: 15px;
 	}
 	h4{
-		font-size:22px;
-	  position:relative;
-	  margin-bottom:30px;
-	  margin-top:15px;
+	  margin-bottom:20px;
 	}
-	.driver-options_inner{
-		padding:0 60px;
+	.primary-btn{
+		margin-top:60px;
+	}
+	.nova-blog_inner{
+		width:50%;
+		padding:0 50px;
+	}
+	.nova-blog_footer{
+		position:relative;
+		width:50%;
+		height:180px;
+		overflow:hidden;
+		a{
+			z-index:2;
+			position:absolute;
+			right:50px;
+		}
+	}
+	.nova-blog_footer-image{
+		position:absolute;
+		left:-100px;
+		width:90%;
+		height:180px;
+		@include transform(skew(34deg));
+		background:$primary;
+		overflow:hidden;
+		&:after{
+			content:"";
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:white;
+		}
+		img{
+			display:block;
+			@include transform(skew(-34deg));
+			width:100%;
+			height:100%;
+			object-fit: cover;
+			object-position: center;
+			margin-left:55px;
+		}
+	}
+}
+
+.slider-nav{
+	margin-top:30px;
+	color:white;
+	font-size:22px;
+	.prev-btn, .next-btn, .dots{
+		display:inline-block;
+	}
+	.prev-btn{
+    @include opacity(0.3);
+	}
+	.dots{
+		margin:0 120px;
+		li{
+			display:inline-block;
+			margin:0 5px;
+			@include opacity(0.3);
+			&:first-child{
+				@include opacity(1);
+			}
+			span{
+				display:block;
+				width:10px;
+				height:10px;
+				border-radius:100%;
+				background:white;
+			}
+		}
 	}
 }
 // ———————————————————————————————
@@ -742,7 +749,7 @@ footer{
 	    }
 	  }
 	}
-	.driver-options_footer-image:after, .why-nova_image-inner:after{
+	.driver-options_footer-image:after, .why-nova_image-inner:after, .nova-blog_footer-image:after{
 		@include transition(transform 1.4s 0.25s $easeOutExpo);
 	}
 	&.show{
@@ -752,7 +759,7 @@ footer{
 	  	@include opacity(1);
 	    @include transform(translateY(0));
 		}
-		.driver-options_footer-image:after, .why-nova_image-inner:after{
+		.driver-options_footer-image:after, .why-nova_image-inner:after, .nova-blog_footer-image:after{
 			@include transform(translateX(100%));
 		}
 	}
