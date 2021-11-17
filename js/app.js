@@ -3,7 +3,13 @@ $(function(){
   const scroller = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    getDirection: true
+    getDirection: true,
+    smartphone: {
+      smooth: 1
+    },
+    tablet: {
+      smooth: 1
+    }
   });
 
   scroller.on('scroll', (instance) => {
@@ -29,9 +35,9 @@ $(function(){
   }
 
   function loop() {
-    var scrollTop = $('main').offset().top;
-    var y         = (scrollTop > lastScrollTop) ? 'down' : ((scrollTop === lastScrollTop) ? 'none' : 'up');
 
+    var scrollTop = $('main').offset().top;
+    
     if (lastScrollTop === scrollTop) {
       raf(loop);
       return;
@@ -47,15 +53,6 @@ $(function(){
       $('header').removeClass('active');
       $('.nav-btn').removeClass('active-header');
     }
-
-    if( y == 'up' ){
-      //$('header').addClass('hide');
-
-    } else{
-      //$('header').removeClass('hide');
-
-    }
-
     if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
       if( scrollTop < -30 ){
         scroll_cue.addClass("active");
@@ -63,7 +60,7 @@ $(function(){
         scroll_cue.removeClass("active");
       }
     }
-
+    
     lastScrollTop = scrollTop;
     checkHiddenStuff();
   }
@@ -85,7 +82,7 @@ $(function(){
 
   function inView(elem){
     if (elem.length){
-      var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ) + $window.scrollTop());
+      var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ));
       var elementTop = elem.offset().top;
       return elementTop <= centerY;
     } 
@@ -93,15 +90,28 @@ $(function(){
 
   $('.nav-btn').on("click", function(){
     $(this).toggleClass("active");
-    //$('#site-nav').fadeToggle('fast');
-    /* 
+    $('#site-nav').fadeToggle('fast').toggleClass("active");
+     
     if( lastScrollTop < -90 ){
       $(this).toggleClass('active-header');
     } else{
       $(this).removeClass('active-header');
     }
-    */
+    
   });
+
+
+
+  $('.nova-blog_slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".slider-nav .prev-btn"),
+    nextArrow: $(".slider-nav .next-btn")
+  });
+
+
+
 
 });
 
