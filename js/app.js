@@ -1,34 +1,19 @@
 $(function(){
 
-  var $window       = $(window);
+  var $window = $(window);
 
   if( $window.width() > 600 ){
-
     const scroller = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    getDirection: true,
-    /*
-    smartphone: {
-      smooth: 1,
-      smoothMobile: true,
-      touchMultiplier: 4
-    },
-    tablet: {
-      smooth: 1,
-      smoothMobile: true
-    }
-    */
-  });
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      getDirection: true,
+    });
 
-  scroller.on('scroll', (instance) => {
-      document.documentElement.setAttribute('data-direction', instance.direction)
-  });
-
+    scroller.on('scroll', (instance) => {
+        document.documentElement.setAttribute('data-direction', instance.direction)
+    });
   }
   
-
-	
 	var raf           = requestAnimationFrame;
   var scroll_cue    = $(".scroll-cue");
   var lastScrollTop;
@@ -61,8 +46,7 @@ $(function(){
     } else{
       scrollTop = $('main').offset().top;
     }
-    var y = (scrollTop > lastScrollTop) ? 'down' : ((scrollTop === lastScrollTop) ? 'none' : 'up');
-    
+  
     if (lastScrollTop === scrollTop) {
       raf(loop);
       return;
@@ -112,8 +96,6 @@ $(function(){
       }
 
     }
-
-    
     
     lastScrollTop = scrollTop;
     checkHiddenStuff();
