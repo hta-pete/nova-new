@@ -125,7 +125,8 @@ TYPE
   font-display: swap;
 }
 h1 {
-  font-family: "DIN Next LT Pro Italic";
+  font-family: "DIN Next LT Pro";
+  font-style: italic;
   font-size: calc(40px + (120 - 40) * ((100vw - 320px) / (1600 - 320)));
   line-height: 1;
   letter-spacing: calc(-2px + ((-5) - (-2)) * ((100vw - 320px) / (1600 - 320)));
@@ -134,7 +135,8 @@ h1 {
 }
 
 h2 {
-  font-family: "DIN Next LT Pro Italic";
+  font-family: "DIN Next LT Pro";
+  font-style: italic;
   font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320)));
   line-height: 1;
   letter-spacing: calc(-1.5px + ((-3) - (-2)) * ((100vw - 320px) / (1600 - 320)));
@@ -143,7 +145,8 @@ h2 {
 }
 
 h3 {
-  font-family: "DIN Next LT Pro Italic";
+  font-family: "DIN Next LT Pro";
+  font-style: italic;
   font-size: 40px;
   font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (1600 - 320)));
   line-height: 1;
