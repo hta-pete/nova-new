@@ -5,10 +5,12 @@ $(function(){
     smooth: true,
     getDirection: true,
     smartphone: {
-      smooth: 1
+      smooth: 1,
+      smoothMobile: true
     },
     tablet: {
-      smooth: 1
+      smooth: 1,
+      smoothMobile: true
     }
   });
 
