@@ -2234,6 +2234,9 @@ footer li {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 10px;
 }
+footer li a {
+  color: rgba(255, 255, 255, 0.6);
+}
 footer i {
   width: 20px;
   text-align: center;
