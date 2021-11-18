@@ -846,10 +846,6 @@ main {
   overflow: hidden;
 }
 
-html[data-direction="down"] header {
-  transform: translate3d(0, -90px, 0);
-}
-
 header {
   position: fixed;
   z-index: 999;
