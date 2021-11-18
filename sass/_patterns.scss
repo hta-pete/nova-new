@@ -35,7 +35,7 @@
 	bottom:-14vw;
 }
 .pattern-in{
-	&.show{
+	&.is-inview{
 		.row{
 			@include opacity(1);
 			@include transform(scaleY(1));

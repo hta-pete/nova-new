@@ -1,141 +1,67 @@
 $(function(){
 
-  var $window = $(window);
+  const $window         = $(window);
+  const scroll_cue      = $(".scroll-cue");
 
-  if( $window.width() > 600 ){
-    const scroller = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-      getDirection: true,
-    });
-
-    scroller.on('scroll', (instance) => {
-        document.documentElement.setAttribute('data-direction', instance.direction)
-    });
-  }
-  
-	var raf           = requestAnimationFrame;
-  var scroll_cue    = $(".scroll-cue");
-  var lastScrollTop;
-
-  if( $window.width() < 600 ){
-    lastScrollTop = $window.scrollTop();
-  } else {
-    lastScrollTop = $('main').offset().top;
-  }
-
-  $window.on('load', function(){
-    if( lastScrollTop < -90 ){
-      $('header').addClass('active');
-      $('.nav-btn').addClass('active-header');
+  const scroller = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    getDirection: true,
+    smartphone: {
+      smooth: false,
+    },
+    tablet: {
+      smooth: false,
     }
-    checkScrollPos();
-    window.dispatchEvent(new Event('resize'));
   });
 
-  if (raf) {
-    loop();
-  }
+  scroller.on('scroll', (instance) => {
 
-  function loop() {
+      document.documentElement.setAttribute('data-direction', instance.direction)
 
-    var scrollTop;
+      let mainScrollTop   = $('main').offset().top;
+      let windowScrollTop = $window.scrollTop();
 
-    if( $window.width() < 600 ){
-      scrollTop = $window.scrollTop();
-    } else{
-      scrollTop = $('main').offset().top;
-    }
-  
-    if (lastScrollTop === scrollTop) {
-      raf(loop);
-      return;
-    } else {
-      lastScrollTop = scrollTop;
-      raf(loop);
-    }
-
-    if( $window.width() > 600 ){
-
-      if( scrollTop < -90 ){
-
-        $('header').addClass('active');
-        $('.nav-btn').addClass('active-header');
-
+      if( mainScrollTop < -90 || windowScrollTop > 90 ){
+        $('header, .nav-btn').addClass('active');
       } else{
-
-        $('header').removeClass('active');
-        $('.nav-btn').removeClass('active-header');
-
+        $('header, .nav-btn').removeClass('active');
       }
 
       if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
-        if( scrollTop < -30 ){
+        if( mainScrollTop < -30 || windowScrollTop > 30 ){
           scroll_cue.addClass("active");
         } else{
           scroll_cue.removeClass("active");
         }
       }
 
-    } else{
+      console.log(mainScrollTop)
+      console.log(windowScrollTop)
 
-      if( scrollTop > 90 ){
-        $('header').addClass('active');
-        $('.nav-btn').addClass('active-header');
-      } else{
-        $('header').removeClass('active');
-        $('.nav-btn').removeClass('active-header');
-      }
+  });
 
-      if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
-        if( scrollTop > 30 ){
-          scroll_cue.addClass("active");
-        } else{
-          scroll_cue.removeClass("active");
-        }
-      }
+	
+  $window.on('load', function(){
 
-    }
-    
-    lastScrollTop = scrollTop;
-    checkHiddenStuff();
-  }
+    window.dispatchEvent(new Event('resize'));
 
-  function checkHiddenStuff(){
-    $('.scroll-in, .pattern-in').each(function(){
-      if ( inView($(this).parent()) ) {
-        $(this).addClass('show');
-      } 
-    });
-  }
-  checkHiddenStuff();
+  });
 
-  function checkScrollPos(){
-    setTimeout(function(){
-      checkHiddenStuff();
-    },500); 
-  };
-
-  function inView(elem){
-    if (elem.length){
-      if( $window.width() > 600 ){
-        var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ));
-      } else{
-        var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ) + $window.scrollTop());
-      }
-      var elementTop = elem.offset().top;
-      return elementTop <= centerY;
-    } 
-  }
+ 
 
   $('.nav-btn').on("click", function(){
-    $(this).toggleClass("active");
+
+    let mainScrollTop   = $('main').offset().top;
+    let windowScrollTop = $window.scrollTop();
+
+    $(this).toggleClass("open");
     $('#site-nav').fadeToggle('fast').toggleClass("active");
      
-    if( lastScrollTop < -90 || lastScrollTop > 90 ){
-      $(this).toggleClass('active-header');
+    if( mainScrollTop < -90 || windowScrollTop > 90 ){
+      $(this).toggleClass('active');
     } else{
-      $(this).removeClass('active-header');
+      $(this).removeClass('active');
     }
     
   });
@@ -173,13 +99,9 @@ $(function(){
 });
 
 
-
 var player = document.querySelectorAll('.video-player');
-
 for (var i = 0; i < player.length; i++) {
-
   daVideoPlayer(player[i]);
-
 }
 
 
