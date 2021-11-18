@@ -750,6 +750,10 @@ body {
   color: #231f20;
 }
 
+main {
+  overflow: hidden;
+}
+
 .btn-group .btn {
   margin: 0 5px;
 }
@@ -858,6 +862,9 @@ header {
   -o-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
+header.down {
+  transform: translate3d(0, -90px, 0);
+}
 header.active {
   background: white;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
@@ -918,11 +925,6 @@ header .phone-header i {
   right: 40px;
   height: 19px;
   cursor: pointer;
-  font-family: "DIN Next LT Pro Italic";
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: white;
 }
 .nav-btn p {
   font-family: "DIN Next LT Pro Italic";
@@ -938,7 +940,7 @@ header .phone-header i {
   height: 19px;
   margin-right: 10px;
 }
-.nav-btn.active-header {
+.nav-btn.active-header p {
   color: #231f20;
 }
 .nav-btn.active-header span {

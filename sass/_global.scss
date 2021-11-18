@@ -5,6 +5,7 @@ body{
 }
 main{
 	//min-width:1100px;
+	overflow:hidden;
 }
 // ———————————————————————————————
 // BUTTONS
@@ -104,6 +105,9 @@ header{
 	width:100%;
 	height:90px;
 	@include transition(all 1s $easeOutExpo);
+	&.down{
+		transform: translate3d(0,-90px,0);
+	}
 	&.active{
 		background:white;
 		box-shadow:0 0 6px 0 rgba(0,0,0,0.3);
@@ -165,11 +169,6 @@ header{
   right:40px;
   height: 19px;
   cursor: pointer;
-  font-family:"DIN Next LT Pro Italic";
-  font-size:13px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:white;
   p{
   	font-family:"DIN Next LT Pro Italic";
 	  font-size:13px;
@@ -185,7 +184,9 @@ header{
   	margin-right:10px;
   }
   &.active-header{
-  	color:$primary;
+  	p{
+  		color:$primary;
+  	}
 	  span {
 		  background: $primary;
 		}

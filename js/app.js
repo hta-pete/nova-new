@@ -61,6 +61,7 @@ $(function(){
     } else{
       scrollTop = $('main').offset().top;
     }
+    var y = (scrollTop > lastScrollTop) ? 'down' : ((scrollTop === lastScrollTop) ? 'none' : 'up');
     
     if (lastScrollTop === scrollTop) {
       raf(loop);
@@ -70,20 +71,56 @@ $(function(){
       raf(loop);
     }
 
-    if( scrollTop < -90 ){
-      $('header').addClass('active');
-      $('.nav-btn').addClass('active-header');
+    if( $window.width() < 600 && y == 'down' ){
+      $('header').addClass('down');
     } else{
-      $('header').removeClass('active');
-      $('.nav-btn').removeClass('active-header');
+      $('header').removeClass('down');
+
     }
-    if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
-      if( scrollTop < -30 ){
-        scroll_cue.addClass("active");
+
+    if( $window.width() > 600 ){
+
+      if( scrollTop < -90 ){
+
+        $('header').addClass('active');
+        $('.nav-btn').addClass('active-header');
+
       } else{
-        scroll_cue.removeClass("active");
+
+        $('header').removeClass('active');
+        $('.nav-btn').removeClass('active-header');
+        
       }
+
+      if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
+        if( scrollTop < -30 ){
+          scroll_cue.addClass("active");
+        } else{
+          scroll_cue.removeClass("active");
+        }
+      }
+
+    } else{
+
+      if( scrollTop > 90 ){
+        $('header').addClass('active');
+        $('.nav-btn').addClass('active-header');
+      } else{
+        $('header').removeClass('active');
+        $('.nav-btn').removeClass('active-header');
+      }
+
+      if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
+        if( scrollTop > 30 ){
+          scroll_cue.addClass("active");
+        } else{
+          scroll_cue.removeClass("active");
+        }
+      }
+
     }
+
+    
     
     lastScrollTop = scrollTop;
     checkHiddenStuff();
@@ -120,7 +157,7 @@ $(function(){
     $(this).toggleClass("active");
     $('#site-nav').fadeToggle('fast').toggleClass("active");
      
-    if( lastScrollTop < -90 ){
+    if( lastScrollTop < -90 || lastScrollTop > 90 ){
       $(this).toggleClass('active-header');
     } else{
       $(this).removeClass('active-header');
