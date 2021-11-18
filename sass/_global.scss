@@ -532,7 +532,8 @@ header{
 		bottom:-60px;
 		left:50%;
 		height:120px;
-		font-family:"DIN Next LT Pro Italic";
+		font-family:"DIN Next LT Pro";
+    font-style:italic;
 	  font-size:13px;
 	  letter-spacing:1px;
 	  text-transform:uppercase;
@@ -928,7 +929,7 @@ header{
 		}
 }
 
-@media(max-width:480px){
+@media(max-width:600px){
 
 	.equipment{
 		z-index:1;
@@ -1181,7 +1182,7 @@ header{
 }
 
 
-@media(max-width:480px){
+@media(max-width:600px){
 	.nova-blog{
 		z-index:2;
 		position:relative;
