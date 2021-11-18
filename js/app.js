@@ -6,7 +6,8 @@ $(function(){
     getDirection: true,
     smartphone: {
       smooth: 1,
-      smoothMobile: true
+      smoothMobile: true,
+      touchMultiplier: 4
     },
     tablet: {
       smooth: 1,
