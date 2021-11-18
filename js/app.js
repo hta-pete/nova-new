@@ -71,13 +71,6 @@ $(function(){
       raf(loop);
     }
 
-    if( $window.width() < 600 && y == 'down' ){
-      $('header').addClass('down');
-    } else{
-      $('header').removeClass('down');
-
-    }
-
     if( $window.width() > 600 ){
 
       if( scrollTop < -90 ){
@@ -89,7 +82,7 @@ $(function(){
 
         $('header').removeClass('active');
         $('.nav-btn').removeClass('active-header');
-        
+
       }
 
       if(typeof(scroll_cue) != 'undefined' && scroll_cue != null){
