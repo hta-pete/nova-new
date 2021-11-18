@@ -111,9 +111,40 @@ $(function(){
   });
 
 
+  $('.watch-video-btn').on("click", function(e){
+
+    e.preventDefault();
+
+    $('#video-overlay').fadeIn('fast');
+    $('.player')[0].play();
+    $('.toggle-btn').html('<i class="icon-pause"></i>');
+
+  });
+  
+  $('#video-overlay').on("click", function(e){
+    
+    if ( $(e.target).hasClass('video-player') ) {
+      $('#video-overlay').fadeOut('fast');
+      $('.player')[0].pause();
+    }
+  }); 
+
+
+
+
 
 
 });
+
+
+
+var player = document.querySelectorAll('.video-player');
+
+for (var i = 0; i < player.length; i++) {
+
+  daVideoPlayer(player[i]);
+
+}
 
 
 
