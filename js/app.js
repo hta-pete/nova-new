@@ -1,9 +1,14 @@
 $(function(){
 
-  const scroller = new LocomotiveScroll({
+  var $window       = $(window);
+
+  if( $window.width() > 600 ){
+
+    const scroller = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     getDirection: true,
+    /*
     smartphone: {
       smooth: 1,
       smoothMobile: true,
@@ -13,16 +18,26 @@ $(function(){
       smooth: 1,
       smoothMobile: true
     }
+    */
   });
 
   scroller.on('scroll', (instance) => {
       document.documentElement.setAttribute('data-direction', instance.direction)
   });
 
-	var $window       = $(window);
+  }
+  
+
+	
 	var raf           = requestAnimationFrame;
-  var lastScrollTop = $('main').offset().top;
   var scroll_cue    = $(".scroll-cue");
+  var lastScrollTop;
+
+  if( $window.width() < 600 ){
+    lastScrollTop = $window.scrollTop();
+  } else {
+    lastScrollTop = $('main').offset().top;
+  }
 
   $window.on('load', function(){
     if( lastScrollTop < -90 ){
@@ -39,7 +54,13 @@ $(function(){
 
   function loop() {
 
-    var scrollTop = $('main').offset().top;
+    var scrollTop;
+
+    if( $window.width() < 600 ){
+      scrollTop = $window.scrollTop();
+    } else{
+      scrollTop = $('main').offset().top;
+    }
     
     if (lastScrollTop === scrollTop) {
       raf(loop);
@@ -85,7 +106,11 @@ $(function(){
 
   function inView(elem){
     if (elem.length){
-      var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ));
+      if( $window.width() > 600 ){
+        var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ));
+      } else{
+        var centerY = Math.max(0,(($window.height() - elem.outerHeight()/2) ) + $window.scrollTop());
+      }
       var elementTop = elem.offset().top;
       return elementTop <= centerY;
     } 
