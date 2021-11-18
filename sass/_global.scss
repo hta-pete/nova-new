@@ -419,7 +419,21 @@ header{
 				margin-bottom:0;
 			}
 			a{
+				display:block;
 				height:20px;
+				span{
+					&:after{
+						display:block;
+						content:"";
+						color:$orange;
+					}
+				}
+				&:hover{
+					span{
+						color:rgba(255,255,255,0.6);
+			      @include transform(translateY(0) !important);
+					}
+				}
 			}
 			&.social-link{
 				a{
@@ -1031,11 +1045,12 @@ header{
 	background:$secondary;
 	.nova-blog_wrap{
 		position:relative;
-		width:960px;
+		width:100%;
+		max-width:960px;
 		margin:0 auto;
 	}
 	.slick-list{
-		width:960px;
+		width:100%;
 		overflow:visible;
 	}
 	.slick-track{
@@ -1356,7 +1371,7 @@ footer{
 		.footer-inner_column{
 			display:block;
 			padding:10px 20px;
-			border-right:1px solid rgba(255,255,255,0.15);
+			border-right:none;
 			&:last-of-type{
 				border-right:none;
 			}
