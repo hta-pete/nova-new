@@ -32,6 +32,8 @@ html,body{
   height:100%;
   -webkit-font-smoothing:antialiased;
   overscroll-behavior-y: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none; 
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––
@@ -52,22 +54,9 @@ TYPE
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'DIN Next LT Pro Italic';
-  src: url('../webfonts/DINNextLTPro-BoldItalic.eot');
-  src: url('../webfonts/DINNextLTPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
-       url('../webfonts/DINNextLTPro-BoldItalic.woff2') format('woff2'),
-       url('../webfonts/DINNextLTPro-BoldItalic.woff') format('woff'),
-       url('../webfonts/DINNextLTPro-BoldItalic.ttf') format('truetype'),
-       url('../webfonts/DINNextLTPro-BoldItalic.svg') format('svg');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-
-h1,h2,h3,h4,h5{ 
-    
+h1,h2,h3,h4,h5,p,{ 
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none; 
 }
 
 h1{
@@ -109,7 +98,6 @@ h5{
   font-size:25px;
   letter-spacing:-1px;
   line-height:1;
-  //margin-bottom:30px;
 }
 p{
   font-size:16px;
