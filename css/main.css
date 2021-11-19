@@ -495,7 +495,7 @@ video::-webkit-media-controls {
 }
 @media (max-width: 480px) {
   .video-player {
-    padding: 20px;
+    padding: 0;
   }
 }
 .video-player .video-play-btn {
