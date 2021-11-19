@@ -67,7 +67,6 @@ $(function(){
   });
 
 
-
   $('.nova-blog_slider').slick({
     infinite: false,
     slidesToShow: 1,
@@ -83,7 +82,6 @@ $(function(){
 
     $('#video-overlay').fadeIn('fast');
     $('.player')[0].play();
-    $('.toggle-btn').html('<i class="icon-pause"></i>');
 
   });
   
@@ -93,16 +91,12 @@ $(function(){
       $('#video-overlay').fadeOut('fast');
       $('.player')[0].pause();
     }
+
   }); 
 
 
 });
 
-
-var player = document.querySelectorAll('.video-player');
-for (var i = 0; i < player.length; i++) {
-  daVideoPlayer(player[i]);
-}
 
 
 
