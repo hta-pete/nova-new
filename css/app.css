@@ -1159,21 +1159,13 @@ header .phone-header i {
   }
 
   .apply-btn {
-    display: inline-block;
-    height: 44px;
-    width: auto;
-    text-align: center;
+    width: 120px;
     font-size: 15px;
-    line-height: 44px;
-    padding: 0 12px;
   }
 
   .primary-btn {
-    height: 44px;
-    width: auto;
+    width: 120px;
     font-size: 15px;
-    line-height: 44px;
-    padding: 0 12px;
   }
 
   .primary-btn_border-white {
