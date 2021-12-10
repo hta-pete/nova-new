@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Nova Lines</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+	<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+  <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+
+</head>
+
+<body> 
+
+	<header>
+		<div class="logo-header">
+			<a href="index.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="144" height="53.3" viewBox="0 0 144 53.3"><path id="logo" d="M11.1,53.3l8.1-22.1h7.9l-6,16.5H34.3l-2.1,5.6ZM54.6,31.2H64.7L67,43.6l4.6-12.4h7.9L71.4,53.3h-10L59,40.9,54.6,53.3h-8Zm50.9,0a7.7,7.7,0,0,1-1,1.5,13.3,13.3,0,0,1-1.4,1.9l-1.5,1.6a2.4,2.4,0,0,1-1.1.6H87.7l-2.4,6.6,4-3.9h9.6l-6,5.7H84.7l-.9,2.5H99.7l-.2.3a2.1,2.1,0,0,1-.4.6l-.3.5-.2.3-1,1.2-1.3,1.2-1.1,1.1-.5.4H73.8l8-22.1Zm14,15.1V46a2,2,0,0,0-.1-.7.5.5,0,0,0-.5-.3h-8.3a4,4,0,0,1-2.2-.6,4.4,4.4,0,0,1-1.7-1.6,5.6,5.6,0,0,1-1.1-2,6,6,0,0,1-.4-2.2,5.6,5.6,0,0,1,.6-2.3,7.9,7.9,0,0,1,1.5-2.4,8.9,8.9,0,0,1,2-1.9,4.6,4.6,0,0,1,2.4-.8h21.2l-2.2,2.9L128,36.9H114.2c-.3,0-.5.2-.7.6a1.9,1.9,0,0,0-.4,1v.2l.2.2.2.2.5.3.4.2h7.9a4.4,4.4,0,0,1,2.3.6,7.5,7.5,0,0,1,1.5,1.6A8.5,8.5,0,0,1,127,44a7.5,7.5,0,0,1,.3,2v.3a6.8,6.8,0,0,1-.5,2.3,10.5,10.5,0,0,1-1.3,2.3,10.5,10.5,0,0,1-1.9,1.7,4.4,4.4,0,0,1-2.2.7H100.2a9.9,9.9,0,0,1,.9-1.4l1.4-1.8,1.3-1.7c.4-.5.7-.7.8-.7h14.1c.4,0,.7-.1.7-.4a1.9,1.9,0,0,0,.1-.8Zm-73.1-.5,5.2-14.6H43.7l-8,22.1h7.9l2.8-7.5ZM10.6,0H23.9L27,16.4,33,0H43.5L32.9,29.1H19.6L16.5,12.8,10.6,29.1H0ZM76.1,19.5a21.9,21.9,0,0,1-4.1,5,24,24,0,0,1-5.5,3.4,17.6,17.6,0,0,1-6.3,1.2H54.7a24.8,24.8,0,0,1-5.6-.5A15,15,0,0,1,44.6,27a8.5,8.5,0,0,1-2.9-3.3,10.7,10.7,0,0,1-1.1-5.1,5.7,5.7,0,0,1,.1-1.3c0-.5.1-1,.1-1.5a16.6,16.6,0,0,1,2.1-6,21.1,21.1,0,0,1,3.9-5A22.6,22.6,0,0,1,52,1.3,13.3,13.3,0,0,1,57.8,0H65c4.5,0,7.8.8,10.1,2.3s3.4,4,3.4,7.5a23.8,23.8,0,0,1-.3,3.6A17,17,0,0,1,76.1,19.5Zm-25-4.1v.3a5.2,5.2,0,0,0,.4,2.1,11.4,11.4,0,0,0,1,1.9,7.5,7.5,0,0,0,1.6,1.5,4.1,4.1,0,0,0,1.9.5h3.6a2.9,2.9,0,0,0,1.5-.5L63.3,20l2-1.7a7.7,7.7,0,0,0,1.5-1.9,2.2,2.2,0,0,0,.6-1.2l.3-.6a1.2,1.2,0,0,1,.1-.5v-.9a2.8,2.8,0,0,0,.1-.9,11,11,0,0,0-.2-1.8,4.4,4.4,0,0,0-.6-1.6,5.3,5.3,0,0,0-1.4-1.1,6.7,6.7,0,0,0-2.2-.4H59a4.9,4.9,0,0,0-1.9.5l-2,1.2a15.3,15.3,0,0,0-1.8,1.8,8.5,8.5,0,0,0-1.4,1.9,6.1,6.1,0,0,1-.5,1.2,4.4,4.4,0,0,0-.2,1C51.1,15,51.1,15.2,51.1,15.4ZM107.7,0H119L99.5,25.7l-.7.9-1.1,1.1-1.2,1a1.6,1.6,0,0,1-1,.4h-9a1.4,1.4,0,0,1-1.1-.6,10.2,10.2,0,0,1-.8-1.5,9.5,9.5,0,0,1-.5-1.8c-.2-.6-.3-1.2-.4-1.6L80.3,0h9.6l2.6,19.6Zm26.5,29.1-1.1-6.2-.8,1.3-1.6,2c-.5.7-1.1,1.3-1.6,1.9a4,4,0,0,1-1.3,1H104.6a1.6,1.6,0,0,0,.1-.4h0L124.5,3.3l.6-.9a11.4,11.4,0,0,0,1.1-1.1l1.2-.9a1.6,1.6,0,0,1,.9-.4h9.3a1.4,1.4,0,0,1,1,.6,5.3,5.3,0,0,1,.8,1.5l.6,1.8c.1.7.3,1.2.4,1.7L144,29.1Zm-12.3-7.3h11.2l-2-13-9.2,12.4Z" fill="#ffffff"/></svg>
+			</a>
+		</div>
+		<div class="apply-header clearfix flex-v">
+			<div class="phone-header apply-header_col"><a href="tel:844-695-6682"><i class="fas fa-mobile-alt"></i> <span>(844) 695-6682</span></a></div>
+			<a href="" class="apply-btn apply-header_col btn btn-50"><span data-text="Apply Now">Apply Now</span></a>
+		</div>
+		<div class="nav-btn apply-header_col flex-all">
+			<div class="nav-btn_inner"><span></span><span></span><span></span></div> <p>Menu</p>
+		</div>
+		<!-- ———————————————————————
+    SITE NAV
+    ———————————————————————— -->
+		<div id="site-nav">
+			<div class="site-nav_inner flex-all">
+				<div class="site-nav_inner-menus">
+					<div class="row flex-b">
+						<div class="site-nav_inner-menus_menu">
+							<h5>Careers</h5>
+							<ul>
+								<li><a href="lease-purchase.html"><span data-text="Lease Purchase">Lease Purchase</span></a></li>
+								<li><a href="owner-operator.html"><span data-text="Owner Operators">Owner Operators</span></a></li>
+								<li><a href="driver-contractor.html"><span data-text="Driver Contactors">Driver Contractors</span></a></li>
+								<li><a href="joint-task-force.html"><span data-text="Joint Task Force">Joint Task Force</span></a></li>
+								<li><a href="equipment.html"><span data-text="Equipment">Equipment</span></a></li>
+								<li><a href="non-driving-jobs.html"><span data-text="Non-Driving Jobs">Non-Driving Jobs</span></a></li>
+								<li><a href="faq.html"><span data-text="FAQs">FAQs</span></a></li>
+							</ul>
+						</div>
+						<div class="site-nav_inner-menus_menu">
+							<h5>About</h5>
+							<ul>
+								<li><a href="about.html"><span data-text="Culture">Culture</span></a></li>
+								<li><a href="about.html"><span data-text="Mission Statement">Mission Statement</span></a></li>
+								<li><a href="about.html"><span data-text="Meet the Team">Meet the Team</span></a></li>
+								<li><a href="about.html"><span data-text="Recognition">Recognition</span></a></li>
+								<li><a href="about.html"><span data-text="Diversity">Diversity</span></a></li>
+								<li><a href="about.html"><span data-text="Sustainability">Sustainability</span></a></li>
+							</ul>
+						</div>				
+						<div class="site-nav_inner-menus_menu">
+							<h5>Customers</h5>
+							<ul>
+								<li><a href="customers.html"><span data-text="Flatbed Services">Flatbed Services</span></a></li>
+								<li><a href="customers.html"><span data-text="Why Choose Us">Why Choose Us</span></a></li>
+							</ul>
+							<h5>Safety</h5>
+							<ul>
+								<li><a href="safety.html"><span data-text="Safe Driving Incentives">Safe Driving Incentives</span></a></li>
+								<li><a href="safety.html"><span data-text="Driver Resource Center">Driver Resource Center</span></a></li>
+								<li><a href="safety.html"><span data-text="Technology and Equipment">Technology and Equipment</span></a></li>
+							</ul>
+						</div>				
+						<div class="site-nav_inner-menus_menu">
+							<h5>Company</h5>
+							<ul>
+								<li><a href="nova-blog.html"><span data-text="Nova Blog">Nova Blog</span></a></li>
+								<li><a href="contact-us.html"><span data-text="Contact Us">Contact Us</span></a></li>
+								<li><a href="privacy-policy.html"><span data-text="Privacy Policy">Privacy Policy</span></a></li>
+							</ul>
+							<h5>Follow Us</h5>
+							<ul>
+								<li class="social-link"><i class="fab fa-facebook-f"></i> <a href=""><span data-text="Facebook">Facebook</span></a></li>
+								<li class="social-link"><i class="fab fa-instagram"></i> <a href=""><span data-text="Instagram">Instagram</span></a></li>
+							</ul>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div><!-- end #site-nav -->
+	</header>
+
+	<main data-scroll-container>
+    <!-- ———————————————————————
+    HERO
+    ———————————————————————— -->
+		<div class="page-hero-md">
+			<div class="page-hero-md_headline">
+				<div class="container-small">
+					<h1>Safety</h1>
+					<p>Safety first. Safety Always. That's what we believe in at Nova Lines to ensure our trucking partners' well-being and safety at all times. We take every possible measure and deploy the industry's best practices including maintenance of our equipment, drivers' background checks, and regular inspection of trucks to make sure whatever we do, we do it right.</p>
+				</div>
+			</div>
+			<div class="page-hero-md_text flex-right flex-v">
+				<span class="page-hero-md_text-tag flex-v">
+					Company <span class="text-dot"></span> <span class="text-title">Safety</span>
+				</span>
+			</div>
+			<div class="page-hero-md_image">
+				<img src="img/page-hero/safety-hero.jpg" data-scroll data-scroll-speed="-1" class="scroll-in">
+				<div class="pattern pattern-med pattern-7 pattern-in" data-scroll>
+					<div class="row flex-h">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="row flex-h">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="row flex-h">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="page-section align-center scroll-in" data-scroll>
+			<div class="container-med">
+				<h3 class="margin-bottom-40">Safe Driving Incentives</h3>
+				<p>We realize that professionals like yourself have a positive impact on a company's reputation, so for your exceptional performance and safe driving we have developed an incentive program that encourages safe behaviors.</p>
+			</div>
+			<div class="container-med">
+				<div class="page-icon-grid">
+					<div class="row flex">
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/truck.png" height="40">
+							<p>Annual driver appreciation</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/umbrella.png" height="40">
+							<p>Quarterly driver incentives based on safety (CSA), service, and other factors</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/trophy.png" height="40">
+							<p>Annual safety<br> awards</p>
+						</div>
+					</div>
+					<div class="row flex-h">
+						<div class="col-1-2_wrap flex">
+							<div class="col col-1-2 align-center text--semi-bold">
+								<img src="img/page/icons/check.png" height="40">
+								<p>Clean DOT inspection incentives</p>
+							</div>
+							<div class="col col-1-2 align-center text--semi-bold">
+								<img src="img/page/icons/odometer.png" height="40">
+								<p>Mileage incentive bonuses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="page-section bg--light-gray align-center scroll-in" data-scroll>
+			<div class="container-med">
+				<h3 class="margin-bottom-40">TECHNOLOGY & EQUIPMENT</h3>
+				<p>Since safety is our topmost priority, we conduct inspections and maintenance of our trucks and equipment at regular intervals to ensure everything is operating the way it should. Our professional staff along with our driver-partners take a collaborative approach towards ensuring the safety and security of everyone. This is a small sample of the technology and support that we utilize for the safety of our drivers and the public:</p>
+			</div>
+			<div class="container-med">
+				<div class="page-icon-grid">
+					<div class="row flex">
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/satellite.png" height="40">
+							<p>Satellite tracking and Electronic Logging Devices</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/wheel.png" height="40">
+							<p>Roll Stability System (RSS) and Anti - Lock Brakes</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/radar.png" height="40">
+							<p>On-guard forward sensing radar crash avoidance</p>
+						</div>
+					</div>
+					<div class="row flex">
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/search.png" height="40">
+							<p>Quarterly DOT level inspections</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/cap.png" height="40">
+							<p>Continuous education of our drivers regarding safe operation</p>
+						</div>
+						<div class="col col-1-3 align-center text--semi-bold">
+							<img src="img/page/icons/clock.png" height="40">
+							<p>24/7 Safety<br>Support</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-contact-cta">
+			<div class="flex">
+				<div class="col-1-2 flex-right flex-v">
+					<h2>Contact</h2>
+					<div class="page-contact-cta_image-inner">
+						<img src="img/page/safety-contact.jpg">
+					</div>
+				</div>
+				<div class="col-1-2 flex-v">
+					<div class="page-contact-cta_info">
+						<span class="page-contact-cta_tag">Safety Department</span>
+					  <a class="page-contact-cta_phone" href="tel:8478810435">(847) 881-0435</a>
+					</div>
+				</div>
+			</div>
+		</section>
+    
+    
+		<!-- ———————————————————————
+    FOOTER
+    ———————————————————————— -->
+		<footer>
+			<div class="footer-inner container">
+				<div class="footer-inner_column footer-about">
+					<img src="img/logo.png" height="40" class="footer-logo">
+					<p>At Nova Lines, we keep sight of the truly important things – progress, comfort, and safety. We are ready to help you take your business towards greater sustainability and profitability through integrity, trust, and honesty.</p>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Contact Us</h5>
+					<ul>
+						<li><i class="fas fa-map-marker-alt"></i> 2314 River Rd, Unit #1, River Grove, IL 60171</li>
+						<li><a href="tel:844-695-6682"><i class="fas fa-mobile-alt"></i> (844) 695-6682</a></li>
+						<li><i class="far fa-envelope"></i> recruiting@novalines.com</li>
+					</ul>
+					<h5>Follow Us</h5>
+					<ul>
+						<li class="footer-social"><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i></li>
+					</ul>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Careers</h5>
+					<ul>
+						<li><a href="lease-purchase.html"><span data-text="Lease Purchase">Lease Purchase</span></a></li>
+						<li><a href="owner-operator.html"><span data-text="Owner Operators">Owner Operators</span></a></li>
+						<li><a href="driver-contractor.html"><span data-text="Driver Contactors">Driver Contractors</span></a></li>
+						<li><a href="joint-task-force.html"><span data-text="Joint Task Force">Joint Task Force</span></a></li>
+						<li><a href="equipment.html"><span data-text="Equipment">Equipment</span></a></li>
+						<li><a href="non-driving-jobs.html"><span data-text="Non-Driving Jobs">Non-Driving Jobs</span></a></li>
+						<li><a href="faq.html"><span data-text="FAQs">FAQs</span></a></li>
+					</ul>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Company</h5>
+					<ul>
+						<li><a href="flatbed-services.html"><span data-text="Flatbed Services">Flatbed Services</span></a></li>
+						<li><a href="about-us.html"><span data-text="About Us">About Us</span></a></li>
+						<li><a href="safety.html"><span data-text="Safety">Safety</span></a></li>
+						<li><a href="driver-resources.html"><span data-text="Driver Resources">Driver Resources</span></a></li>
+						<li><a href="nova-blog.html"><span data-text="Nova Blog">Nova Blog</span></a></li>
+						<li><a href="contact-us.html"><span data-text="Contact Us">Contact Us</span></a></li>
+						<li><a href="privacy-policy.html"><span data-text="Privacy Policy">Privacy Policy</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright container">&copy; 2021 Nova Lines. All rights reserved</div>
+		</footer>
+
+	</main>
+
+	<div id="video-overlay">
+		<div class="video-player flex-v">
+			<div class="video-container container">
+				<video width="960" class="player" playsinline controls>
+					<source src="https://novalines.com/wp-content/uploads/2021/02/JIM.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/libs/vendor.js"></script>
+	<script src="js/app.js"></script>
+
+	</body>
+	</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Nova Lines</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+	<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+  <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+
+</head>
+
+<body> 
+
+	<header>
+		<div class="logo-header">
+			<a href="index.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="144" height="53.3" viewBox="0 0 144 53.3"><path id="logo" d="M11.1,53.3l8.1-22.1h7.9l-6,16.5H34.3l-2.1,5.6ZM54.6,31.2H64.7L67,43.6l4.6-12.4h7.9L71.4,53.3h-10L59,40.9,54.6,53.3h-8Zm50.9,0a7.7,7.7,0,0,1-1,1.5,13.3,13.3,0,0,1-1.4,1.9l-1.5,1.6a2.4,2.4,0,0,1-1.1.6H87.7l-2.4,6.6,4-3.9h9.6l-6,5.7H84.7l-.9,2.5H99.7l-.2.3a2.1,2.1,0,0,1-.4.6l-.3.5-.2.3-1,1.2-1.3,1.2-1.1,1.1-.5.4H73.8l8-22.1Zm14,15.1V46a2,2,0,0,0-.1-.7.5.5,0,0,0-.5-.3h-8.3a4,4,0,0,1-2.2-.6,4.4,4.4,0,0,1-1.7-1.6,5.6,5.6,0,0,1-1.1-2,6,6,0,0,1-.4-2.2,5.6,5.6,0,0,1,.6-2.3,7.9,7.9,0,0,1,1.5-2.4,8.9,8.9,0,0,1,2-1.9,4.6,4.6,0,0,1,2.4-.8h21.2l-2.2,2.9L128,36.9H114.2c-.3,0-.5.2-.7.6a1.9,1.9,0,0,0-.4,1v.2l.2.2.2.2.5.3.4.2h7.9a4.4,4.4,0,0,1,2.3.6,7.5,7.5,0,0,1,1.5,1.6A8.5,8.5,0,0,1,127,44a7.5,7.5,0,0,1,.3,2v.3a6.8,6.8,0,0,1-.5,2.3,10.5,10.5,0,0,1-1.3,2.3,10.5,10.5,0,0,1-1.9,1.7,4.4,4.4,0,0,1-2.2.7H100.2a9.9,9.9,0,0,1,.9-1.4l1.4-1.8,1.3-1.7c.4-.5.7-.7.8-.7h14.1c.4,0,.7-.1.7-.4a1.9,1.9,0,0,0,.1-.8Zm-73.1-.5,5.2-14.6H43.7l-8,22.1h7.9l2.8-7.5ZM10.6,0H23.9L27,16.4,33,0H43.5L32.9,29.1H19.6L16.5,12.8,10.6,29.1H0ZM76.1,19.5a21.9,21.9,0,0,1-4.1,5,24,24,0,0,1-5.5,3.4,17.6,17.6,0,0,1-6.3,1.2H54.7a24.8,24.8,0,0,1-5.6-.5A15,15,0,0,1,44.6,27a8.5,8.5,0,0,1-2.9-3.3,10.7,10.7,0,0,1-1.1-5.1,5.7,5.7,0,0,1,.1-1.3c0-.5.1-1,.1-1.5a16.6,16.6,0,0,1,2.1-6,21.1,21.1,0,0,1,3.9-5A22.6,22.6,0,0,1,52,1.3,13.3,13.3,0,0,1,57.8,0H65c4.5,0,7.8.8,10.1,2.3s3.4,4,3.4,7.5a23.8,23.8,0,0,1-.3,3.6A17,17,0,0,1,76.1,19.5Zm-25-4.1v.3a5.2,5.2,0,0,0,.4,2.1,11.4,11.4,0,0,0,1,1.9,7.5,7.5,0,0,0,1.6,1.5,4.1,4.1,0,0,0,1.9.5h3.6a2.9,2.9,0,0,0,1.5-.5L63.3,20l2-1.7a7.7,7.7,0,0,0,1.5-1.9,2.2,2.2,0,0,0,.6-1.2l.3-.6a1.2,1.2,0,0,1,.1-.5v-.9a2.8,2.8,0,0,0,.1-.9,11,11,0,0,0-.2-1.8,4.4,4.4,0,0,0-.6-1.6,5.3,5.3,0,0,0-1.4-1.1,6.7,6.7,0,0,0-2.2-.4H59a4.9,4.9,0,0,0-1.9.5l-2,1.2a15.3,15.3,0,0,0-1.8,1.8,8.5,8.5,0,0,0-1.4,1.9,6.1,6.1,0,0,1-.5,1.2,4.4,4.4,0,0,0-.2,1C51.1,15,51.1,15.2,51.1,15.4ZM107.7,0H119L99.5,25.7l-.7.9-1.1,1.1-1.2,1a1.6,1.6,0,0,1-1,.4h-9a1.4,1.4,0,0,1-1.1-.6,10.2,10.2,0,0,1-.8-1.5,9.5,9.5,0,0,1-.5-1.8c-.2-.6-.3-1.2-.4-1.6L80.3,0h9.6l2.6,19.6Zm26.5,29.1-1.1-6.2-.8,1.3-1.6,2c-.5.7-1.1,1.3-1.6,1.9a4,4,0,0,1-1.3,1H104.6a1.6,1.6,0,0,0,.1-.4h0L124.5,3.3l.6-.9a11.4,11.4,0,0,0,1.1-1.1l1.2-.9a1.6,1.6,0,0,1,.9-.4h9.3a1.4,1.4,0,0,1,1,.6,5.3,5.3,0,0,1,.8,1.5l.6,1.8c.1.7.3,1.2.4,1.7L144,29.1Zm-12.3-7.3h11.2l-2-13-9.2,12.4Z" fill="#ffffff"/></svg>
+			</a>
+		</div>
+		<div class="apply-header clearfix flex-v">
+			<div class="phone-header apply-header_col"><a href="tel:844-695-6682"><i class="fas fa-mobile-alt"></i> <span>(844) 695-6682</span></a></div>
+			<a href="" class="apply-btn apply-header_col btn btn-50"><span data-text="Apply Now">Apply Now</span></a>
+		</div>
+		<div class="nav-btn apply-header_col flex-all">
+			<div class="nav-btn_inner"><span></span><span></span><span></span></div> <p>Menu</p>
+		</div>
+		<!-- ———————————————————————
+    SITE NAV
+    ———————————————————————— -->
+		<!-- ———————————————————————
+    SITE NAV
+    ———————————————————————— -->
+		<div id="site-nav">
+			<div class="site-nav_inner flex-all">
+				<div class="site-nav_inner-menus">
+					<div class="row flex-b">
+						<div class="site-nav_inner-menus_menu">
+							<h5>Careers</h5>
+							<ul>
+								<li><a href="lease-purchase.html"><span data-text="Lease Purchase">Lease Purchase</span></a></li>
+								<li><a href="owner-operator.html"><span data-text="Owner Operators">Owner Operators</span></a></li>
+								<li><a href="driver-contractor.html"><span data-text="Driver Contactors">Driver Contractors</span></a></li>
+								<li><a href="joint-task-force.html"><span data-text="Joint Task Force">Joint Task Force</span></a></li>
+								<li><a href="equipment.html"><span data-text="Equipment">Equipment</span></a></li>
+								<li><a href="non-driving-jobs.html"><span data-text="Non-Driving Jobs">Non-Driving Jobs</span></a></li>
+								<li><a href="faq.html"><span data-text="FAQs">FAQs</span></a></li>
+							</ul>
+						</div>
+						<div class="site-nav_inner-menus_menu">
+							<h5>About</h5>
+							<ul>
+								<li><a href="about.html"><span data-text="Culture">Culture</span></a></li>
+								<li><a href="about.html"><span data-text="Mission Statement">Mission Statement</span></a></li>
+								<li><a href="about.html"><span data-text="Meet the Team">Meet the Team</span></a></li>
+								<li><a href="about.html"><span data-text="Recognition">Recognition</span></a></li>
+								<li><a href="about.html"><span data-text="Diversity">Diversity</span></a></li>
+								<li><a href="about.html"><span data-text="Sustainability">Sustainability</span></a></li>
+							</ul>
+						</div>				
+						<div class="site-nav_inner-menus_menu">
+							<h5>Customers</h5>
+							<ul>
+								<li><a href="customers.html"><span data-text="Flatbed Services">Flatbed Services</span></a></li>
+								<li><a href="customers.html"><span data-text="Why Choose Us">Why Choose Us</span></a></li>
+							</ul>
+							<h5>Safety</h5>
+							<ul>
+								<li><a href="safety.html"><span data-text="Safe Driving Incentives">Safe Driving Incentives</span></a></li>
+								<li><a href="safety.html"><span data-text="Driver Resource Center">Driver Resource Center</span></a></li>
+								<li><a href="safety.html"><span data-text="Technology and Equipment">Technology and Equipment</span></a></li>
+							</ul>
+						</div>				
+						<div class="site-nav_inner-menus_menu">
+							<h5>Company</h5>
+							<ul>
+								<li><a href="nova-blog.html"><span data-text="Nova Blog">Nova Blog</span></a></li>
+								<li><a href="contact-us.html"><span data-text="Contact Us">Contact Us</span></a></li>
+								<li><a href="privacy-policy.html"><span data-text="Privacy Policy">Privacy Policy</span></a></li>
+							</ul>
+							<h5>Follow Us</h5>
+							<ul>
+								<li class="social-link"><i class="fab fa-facebook-f"></i> <a href=""><span data-text="Facebook">Facebook</span></a></li>
+								<li class="social-link"><i class="fab fa-instagram"></i> <a href=""><span data-text="Instagram">Instagram</span></a></li>
+							</ul>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div><!-- end #site-nav -->
+	</header>
+
+	<main data-scroll-container>
+    <!-- ———————————————————————
+    HERO
+    ———————————————————————— -->
+		<div class="page-hero-sm">
+			<div class="page-hero-sm_text flex-right flex-v">
+				<span class="page-hero-sm_text-tag flex-v">
+					Careers <span class="text-dot"></span> <span class="text-title">Lease Purchase</span>
+				</span>
+			</div>
+			<div class="page-hero-sm_image"><img src="img/page-hero/lease-hero.jpg" data-scroll data-scroll-speed="-1" class="scroll-in"></div>
+			<div class="pattern pattern-med pattern-7 pattern-in" data-scroll>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+				</div>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="page-section align-center scroll-in" data-scroll>
+			<div class="container-small">
+				<h2 class="margin-bottom-40">Take control of<br>your own path.</h2>
+				<p>Owning a truck has never been easy. From strict terms and conditions to the upfront cost of acquiring possession, there are many hurdles that get in the way. With Nova Line, not anymore! With an extensive range of top-of-the-line trucks and driver-friendly lease terms, we provide you with an easy path to ownership.</p>
+				<p>At the core of our lease-purchase program is a true commitment to deliver you the control you have been looking for. Choose a plan that fits your needs and bet on us to stand behind your endeavors playing our part in your success. Owning a truck has never been easier.</p>
+				<a href="" class="primary-btn scroll-in btn btn-50 margin-top-50" data-scroll><span data-text="Apply Now">Apply Now</span></a>
+			</div>
+			
+		</section>
+    
+    <!-- ———————————————————————
+    PAGE BENEFITS
+    ———————————————————————— -->
+		<section class="page-benefits flex-v">
+			<div class="col-1-2">
+				<div class="page-benefits_image scroll-in" data-scroll>
+					<div class="page-benefits_image-inner">
+						<img src="img/page/lease-highlights.jpg">
+						<div class="pattern pattern-med pattern-7 pattern-in" data-scroll>
+							<div class="row flex-h">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="row flex-h">
+								<span></span>
+								<span></span>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<div class="page-text_block scroll-in" data-scroll>
+					<h3 class="margin-bottom-30">Lease Highlights</h3>
+					<ul class="bullets">
+						<li>Consistent weekly revenue stream ensures financial independence</li>
+						<li>Flexible lease contracts allow you to walk away when you want</li>
+						<li>Have a truck to call your own when the lease term ends</li>
+						<li>Only well-maintained, top of the line trucks and trailers</li>
+					</ul>	
+				</div>
+			</div>
+		</section>
+		<!-- ———————————————————————
+    PAGE HOMETIME
+    ———————————————————————— -->
+		<section class="page-hometime">
+			<div class="container flex flex-v">
+				<div class="col-1-2">
+					<div class="page-text_block scroll-in" data-scroll>
+						<h3 class="margin-bottom-30">Hometime Options</h3>
+						<p>Nova Lines does not only provide you with a truck to call your own but hauling job opportunities as well to ensure a consistent revenue stream for you. We give the power of choice back to the drivers by allowing them to choose their own routes and distances.</p>
+						<p>At Nova Lines, we understand that you cannot stay on the road forever and need to get back to your loved ones. This is why we have a pool of drivers with diverse personal engagements as some of them choose to return every week while others keep trucking for four weeks in a row.</p>
+					</div>
+				</div>
+				<div class="col-1-2">
+					<div class="page-hometime_image scroll-in" data-scroll>
+						<img src="img/page/nova-hiring-map.png">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ———————————————————————
+    PAGE FAQS
+    ———————————————————————— -->
+		<section class="page-faqs">
+			<div class="page-faqs_header scroll-in" data-scroll>
+				<h3>Lease FAQs</h3>
+			</div>
+			<div class="page-faqs_questions">
+				<div class="page-faqs_questions-list">
+
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>Are Nova Lines trucks able to provide driver comfort without idling?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Nova Lines Freightliner Cascadias come with a built-in ParkSmart HVAC system which regulates the sleeper’s temperature even when the truck engine is off providing driver comfort without the noise, fuel consumption and wear and tear of idling.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>Does Nova Line offer a lease purchase program?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Absolutely! Nova Lines offers a flexible and driver-friendly lease purchase program to qualified candidates enabling them to move towards self-employment and gain financial independence.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>How long is the average lease term?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Depending on the life of the truck and driver’s requirements, our average lease terms range anywhere between 3 and 5 years. This gives truck drivers enough time to pay out their lease while making a decent revenue..</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>What types of trucks are available for lease?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>At Nova Lines, we try to deliver our truck drivers the ideal balance of price and performance. This is why the majority of our fleet consists of 2018 – 2022 Freightliner Cascadia vehicles with some 2016 models as well.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>Do you give any warranty?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Yes. All of our trucks come with extended warranty for your peace of mind. We believe in what we do and that’s why we do not hesitate to stand behind our services.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>What kind of engines do you use in your trucks?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Nova Lines is completely devoted to delivering value to its customers and that’s why we use Detroit Diesel engines which provide a perfect blend of fuel efficiency, performance, and durability.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>What kind of transmission are your trucks equipped with?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>All of the trucks in our fleet are equipped with automatic transmission for enhanced convenience and driver-friendliness. For those who want more control, we offer trucks with manual transmission as well, when available.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>Is there any balloon payment?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Absolutely not! Working with Nova Lines means you never have to deal with fine print deceptions and hidden costs. Once the lease term ends, you can buy out your truck for a nominal price of $1.00.</p>
+							</div>
+						</div>
+					</div>
+					<div class="list-item scroll-in" data-scroll>
+						<div class="list-item_question">
+							<div class="container-small">
+								<h4>Are Nova Lines lease purchase trucks governed?</h4>
+								<div class="list-toggle-btn"><i class="fa fa-chevron-down"></i></div>
+							</div>
+						</div>
+						<div class="list-item_answer">
+							<div class="container-small">
+								<p>Yes. For cruise control, our trucks are governed at 65 mph and for pedals, the limit is 67 mph. We put the safety of our customers as our top most priority.</p>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+		<!-- ———————————————————————
+    READY TO GET STARTED
+    ———————————————————————— -->
+		<section class="ready-to-get-started flex-all">
+			<div class="ready-to-get-started_text align-center">
+				<h1 class="scroll-in" data-scroll><span>Get</span> <span>Started</span> <span>Today</span></h1>
+				<img src="img/trucks.png">
+				<p class="scroll-in" data-scroll>Check out current opportunities in your area!</p>
+				<a href="" class="primary-btn scroll-in btn btn-50" data-scroll><span data-text="Apply Now">Apply Now</span></a>
+			</div>
+			<div class="pattern pattern-med pattern-7 pattern-in" data-scroll>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+				</div>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="row flex-h">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</section>
+		<!-- ———————————————————————
+    PAGE REVIEWS
+    ———————————————————————— -->
+		<section class="page-reviews">
+			<div class="page-reviews_text align-center">
+				<h3 class="scroll-in" data-scroll>Driver Reviews</h3>
+			</div>
+			<div class="page-reviews_wrap page-reviews_slider">
+				<div class="col-1-3 scroll-in" data-scroll>
+					<div class="col-1-3_inner flex-v">
+						<div class="page-reviews_inner">
+							<span class="page-reviews_stars"><img src="img/page/review-stars.png" height="7"></span>
+							<h4>Extremely friendly, professional staff</h4>
+							<p>Drivers here are treated like human beings, they know you by name, not truck numbers. Extremely friendly yet professional staff, im glad I made the move. The pay is great and couldnt ask for better equipment. When you have an issue they go above and beyond to accomodate the situation and do their best to keep you from sitting in limbo. This company is worth every ounce of loyalty a driver could ever have for his job.</p>
+							<span class="page-reviews_name">Arhur B. &mdash; Lease Operator</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-3 scroll-in" data-scroll>
+					<div class="col-1-3_inner flex-v">
+						<div class="page-reviews_inner">
+							<span class="page-reviews_stars"><img src="img/page/review-stars.png" height="7"></span>
+							<h4>Nova Lines is a Great Company</h4>
+							<p>Nova Lines is a great company, one of the better companies I have worked for. They have a supportive office staff. I get along great with my dispatcher. I have driven their older and newer trucks and they are running good and well maintained. I have hauled many different loads which caused me to sharpen my skills. Never sat more than a day</p>
+							<span class="page-reviews_name">Attim M. &mdash; Driver Contractor</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-3 scroll-in" data-scroll>
+					<div class="col-1-3_inner flex-v">
+						<div class="page-reviews_inner">
+							<span class="page-reviews_stars"><img src="img/page/review-stars.png" height="7"></span>
+							<h4>I like Nova Lines, it feels like a family over here.</h4>
+							<p>I like Nova Lines, it feels like a family over here. Everyone is friendly, and I feel we are developing a great employer/contractor relationship. Another big plus is the equipment. Even as a company contractor, they’ve assigned me a fresh 2021 Freightliner Cascadia, along with all the small details like inverters, refregirator, new mattress, parksmart system, and so on.</p>
+							<span class="page-reviews_name">Roxy C. &mdash; Company Driver</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-3 scroll-in" data-scroll>
+					<div class="col-1-3_inner flex-v">
+						<div class="page-reviews_inner">
+							<span class="page-reviews_stars"><img src="img/page/review-stars.png" height="7"></span>
+							<h4>I finally realized what it is like to work for a company who really wants nothing more from you than to succeed!</h4>
+							<p>Nova was a company I strived to work for since I got the itch to go be a flatbed driver. Everyone there are great people to work with and they shoot it to you straight. I couldn’t be happier than to be working for a great company like Nova Lines and plan to spend many years with them!</p>
+							<span class="page-reviews_name">Chance L. &mdash; Lease Operator</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-3 scroll-in" data-scroll>
+					<div class="col-1-3_inner flex-v">
+						<div class="page-reviews_inner">
+							<span class="page-reviews_stars"><img src="img/page/review-stars.png" height="7"></span>
+							<h4>I have found the company for me.</h4>
+							<p>Came here skeptical. But the people here from the CEO all the way down to the shop and recruiters. Their all the best. They are about their money. But they care about their drivers as family. I have found the company for me.</p>
+							<span class="page-reviews_name">Albert R. &mdash; Lease Operator</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-nav align-center flex-h">
+				<div class="flex-v">
+					<span class="prev-btn"><i class="fa fa-chevron-left"></i></span>
+					<span class="next-btn"><i class="fa fa-chevron-right"></i></span>
+				</div>
+			</div>
+		</section>
+		<!-- ———————————————————————
+    FOOTER
+    ———————————————————————— -->
+		<footer>
+			<div class="footer-inner container">
+				<div class="footer-inner_column footer-about">
+					<img src="img/logo.png" height="40" class="footer-logo">
+					<p>At Nova Lines, we keep sight of the truly important things – progress, comfort, and safety. We are ready to help you take your business towards greater sustainability and profitability through integrity, trust, and honesty.</p>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Contact Us</h5>
+					<ul>
+						<li><i class="fas fa-map-marker-alt"></i> 2314 River Rd, Unit #1, River Grove, IL 60171</li>
+						<li><a href="tel:844-695-6682"><i class="fas fa-mobile-alt"></i> (844) 695-6682</a></li>
+						<li><i class="far fa-envelope"></i> recruiting@novalines.com</li>
+					</ul>
+					<h5>Follow Us</h5>
+					<ul>
+						<li class="footer-social"><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i></li>
+					</ul>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Careers</h5>
+					<ul>
+						<li><a href="lease-purchase.html"><span data-text="Lease Purchase">Lease Purchase</span></a></li>
+						<li><a href="owner-operator.html"><span data-text="Owner Operators">Owner Operators</span></a></li>
+						<li><a href="driver-contractor.html"><span data-text="Driver Contactors">Driver Contractors</span></a></li>
+						<li><a href="joint-task-force.html"><span data-text="Joint Task Force">Joint Task Force</span></a></li>
+						<li><a href="equipment.html"><span data-text="Equipment">Equipment</span></a></li>
+						<li><a href="non-driving-jobs.html"><span data-text="Non-Driving Jobs">Non-Driving Jobs</span></a></li>
+						<li><a href="faq.html"><span data-text="FAQs">FAQs</span></a></li>
+					</ul>
+				</div>
+				<div class="footer-inner_column">
+					<h5>Company</h5>
+					<ul>
+						<li><a href="flatbed-services.html"><span data-text="Flatbed Services">Flatbed Services</span></a></li>
+						<li><a href="about-us.html"><span data-text="About Us">About Us</span></a></li>
+						<li><a href="safety.html"><span data-text="Safety">Safety</span></a></li>
+						<li><a href="driver-resources.html"><span data-text="Driver Resources">Driver Resources</span></a></li>
+						<li><a href="nova-blog.html"><span data-text="Nova Blog">Nova Blog</span></a></li>
+						<li><a href="contact-us.html"><span data-text="Contact Us">Contact Us</span></a></li>
+						<li><a href="privacy-policy.html"><span data-text="Privacy Policy">Privacy Policy</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright container">&copy; 2021 Nova Lines. All rights reserved</div>
+		</footer>
+
+	</main>
+
+	<div id="video-overlay">
+		<div class="video-player flex-v">
+			<div class="video-container container">
+				<video width="960" class="player" playsinline controls>
+					<source src="https://novalines.com/wp-content/uploads/2021/02/JIM.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/libs/vendor.js"></script>
+	<script src="js/app.js"></script>
+
+	</body>
+	</html>

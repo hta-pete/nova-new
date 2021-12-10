@@ -36,8 +36,8 @@ $(function(){
         }
       }
 
-      console.log(mainScrollTop)
-      console.log(windowScrollTop)
+      //console.log(mainScrollTop)
+      //console.log(windowScrollTop)
 
   });
 
@@ -74,6 +74,28 @@ $(function(){
     prevArrow: $(".slider-nav .prev-btn"),
     nextArrow: $(".slider-nav .next-btn")
   });
+  $('.page-reviews_slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".slider-nav .prev-btn"),
+    nextArrow: $(".slider-nav .next-btn"),
+    dots: true,
+    customPaging : function(slider, i) {
+        return '<span></span>';
+    },
+  });
+  $('.page-slides_slider').slick({
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: $(".slider-nav .prev-btn"),
+    nextArrow: $(".slider-nav .next-btn"),
+    dots: true,
+    customPaging : function(slider, i) {
+        return '<span></span>';
+    },
+  });
 
 
   $('.watch-video-btn').on("click", function(e){
@@ -94,6 +116,61 @@ $(function(){
 
   }); 
 
+
+
+  $('.list-item_question').on("click", function(){
+
+    var $questions = $(".list-item_answer");
+    var $question  = $(this).parent().find(".list-item_answer");
+
+    $questions.each(function(){
+      if( $(this).is(':visible') ){
+        $(this).slideUp('fast');
+        $(this).parent().find('.list-toggle-btn').removeClass("open");
+      }
+    });
+
+    if( $question.is(':visible') ){
+      $question.slideUp('fast');
+      $(this).find('.list-toggle-btn').removeClass("open");
+    } else{
+      $question.slideDown('fast');
+      $(this).find('.list-toggle-btn').addClass("open");
+    }
+
+  });
+
+
+
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  // Card Slider
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  let cardsWrap = document.querySelectorAll(".page-slider-wrap");
+  let cards;
+
+  cardsWrap.forEach(function(p){
+    let card      = p.querySelectorAll(".page-slider_slide");
+    let cardsNext = p.querySelector(".page-slider_next");
+    let cardsPrev = p.querySelector(".page-slider_prev");
+
+    cardsNext.addEventListener("click", scrollCardsLeft);
+    cardsPrev.addEventListener("click", scrollCardsRight);
+  });
+
+  function scrollCardsLeft(){
+    cards = this.parentNode.querySelector(".page-slider");
+    cards.scrollBy({
+      left: 960, 
+      behavior: 'smooth'
+    });
+  }
+  function scrollCardsRight(){
+    cards = this.parentNode.querySelector(".page-slider");
+    cards.scrollBy({
+      left: -960, 
+      behavior: 'smooth'
+    });
+  }
 
 });
 

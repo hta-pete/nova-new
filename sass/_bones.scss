@@ -63,15 +63,15 @@ h1{
   font-family:"DIN Next LT Pro";
   font-style:italic;
   font-size: calc(40px + (120 - 40) * ((100vw - 320px) / (1600 - 320))); 
-  line-height:1;
-  letter-spacing:calc(-2px + ((-5) - (-2)) * ((100vw - 320px) / (1600 - 320)));
+  line-height:0.85;
+  letter-spacing:-0.02em;
   text-transform:uppercase;
   margin-bottom:20px;
 }
 h2{
   font-family:"DIN Next LT Pro";
   font-style:italic;
-  font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320))); 
+  font-size: calc(32px + (60 - 32) * ((100vw - 320px) / (1600 - 320))); 
   line-height:1;
   letter-spacing:calc(-1.5px + ((-3) - (-2)) * ((100vw - 320px) / (1600 - 320)));
   text-transform:uppercase;
@@ -100,10 +100,14 @@ h5{
   line-height:1;
 }
 p{
-  font-size:16px;
+  font-size:17px;
   line-height:1.6;
-  margin-bottom:10px;
+  letter-spacing:-0.01em;
+  margin-bottom:20px;
   color:$secondary;
+  &:last-of-type{
+    margin-bottom:0;
+  }
 }
 li{
   position:relative;
@@ -113,10 +117,10 @@ li{
 }
 .bullets{
   li{
+    display:block !important;
     color:$secondary;
     list-style:none;
     padding-left:30px;
-    white-space: nowrap;
     &:before{
       position:absolute;
       left:0;
@@ -131,6 +135,17 @@ li{
 }
 a{
     text-decoration:none;
+}
+
+.text--semi-bold{
+  font-weight:500;
+}
+
+.text--light{
+  color:white;
+  p{
+    color:rgba(255,255,255,0.8);
+  }
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––
@@ -160,6 +175,9 @@ UTILITY
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.flex{
+  display:flex;
 }
 .flex-right{
     display:flex;
@@ -210,7 +228,23 @@ UTILITY
 }
 
 .pad-top-60{
-  padding-top:40px;
+  padding-top:40px !important;
+}
+
+
+.margin-top-50{
+  margin-top:50px !important;
+}
+
+
+.margin-bottom-30{
+  margin-bottom:30px !important;
+}
+.margin-bottom-40{
+  margin-bottom:40px !important;
+}
+.margin-bottom-50{
+  margin-bottom:50px !important;
 }
 /* ––––––––––––––––––––––––––––––––––––––––––––
 
@@ -227,7 +261,7 @@ GRID
 .container-med{
     position:relative;
     width:100%;
-    max-width:1120px;
+    max-width:960px;
     margin:0 auto;
 }
 .container-small{
@@ -321,6 +355,11 @@ GRID
   position:relative;
   width:75%;
   float:left;
+}
+
+
+.bg--light-gray{
+  background:#f6f6f6;
 }
 
 
