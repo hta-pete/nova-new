@@ -15,6 +15,7 @@ main{
 	}
 }
 .btn{
+	position:relative;
 	span{
 		position:relative;
 		display:block;
@@ -33,6 +34,44 @@ main{
 		}
 	}
 }
+.btn_inner{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.btn--skewed{
+	position:relative;
+	background:transparent !important;
+	&:before{
+		content:"";
+		position:absolute;
+		display:block;
+		left:0;
+		width:100%;
+		height:100%;
+		background:$orange;
+		@include transform(skew(-34deg));
+	}
+}
+.btn--skewed_white-border{
+	position:relative;
+	background:transparent !important;
+	&:before{
+		content:"";
+		position:absolute;
+		display:block;
+		left:0;
+		width:100%;
+		height:100%;
+		border:1px solid white;
+		@include transform(skew(-34deg));
+	}
+}
+
+
 
 
 .apply-btn{
@@ -47,7 +86,7 @@ main{
 	padding:0;
 	border-radius:10px;
 	background:$orange;
-	overflow:hidden;
+	
 }
 .primary-btn{
 	display:inline-block;
@@ -61,7 +100,7 @@ main{
 	padding:0;
 	border-radius:10px;
 	background:$orange;
-	overflow:hidden;
+	
 }
 .primary-btn--sm{
 	display:inline-block;
@@ -91,6 +130,7 @@ main{
 	border:1px solid white;
 	overflow:hidden;
 }
+/*
 .secondary-btn{
 	display:inline-block;
 	height:40px;
@@ -103,6 +143,22 @@ main{
 	padding:0;
 	border-radius:10px;
 	background:$orange;
+	overflow:hidden;
+}
+*/
+.secondary-btn{
+	display:inline-block;
+	height:40px;
+	width:140px;
+	text-align:center;
+	font-size:14px;
+	line-height:40px;
+	font-weight:700;
+	padding:0;
+	border-radius:10px;
+	background:white;
+	color:$orange;
+	box-shadow:0 1px 4px 0 rgba(0,0,0,0.2);
 	overflow:hidden;
 }
 // ———————————————————————————————
