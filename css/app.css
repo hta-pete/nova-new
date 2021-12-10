@@ -540,6 +540,7 @@ main {
 }
 
 .btn--skewed {
+  overflow: visible !important;
   position: relative;
   background: transparent !important;
 }
@@ -559,6 +560,7 @@ main {
 }
 
 .btn--skewed_white-border {
+  overflow: visible !important;
   position: relative;
   background: transparent !important;
 }
@@ -589,6 +591,7 @@ main {
   padding: 0;
   border-radius: 10px;
   background: #f37021;
+  overflow: hidden;
 }
 
 .primary-btn {
@@ -603,6 +606,7 @@ main {
   padding: 0;
   border-radius: 10px;
   background: #f37021;
+  overflow: hidden;
 }
 
 .primary-btn--sm {
