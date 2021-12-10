@@ -3430,6 +3430,7 @@ footer .copyright {
   position: relative;
   z-index: 2;
   background: white;
+  overflow: hidden;
 }
 
 .page-faqs_header {
@@ -3741,4 +3742,4 @@ footer .copyright {
   right: 20px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=app.css.map */
