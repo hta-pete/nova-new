@@ -55,6 +55,12 @@ main{
 		height:100%;
 		background:$orange;
 		@include transform(skew(-34deg));
+		border-radius:6px 0 6px 0;
+	}
+	&.--gray{
+		&:before{
+			background:$secondary;
+		}
 	}
 }
 .btn--skewed_white-border{
@@ -70,6 +76,7 @@ main{
 		height:100%;
 		border:1px solid white;
 		@include transform(skew(-34deg));
+		border-radius:6px 0 6px 0;
 	}
 }
 
@@ -153,7 +160,7 @@ main{
 .secondary-btn{
 	display:inline-block;
 	height:40px;
-	width:140px;
+	width:120px;
 	text-align:center;
 	font-size:14px;
 	line-height:40px;
